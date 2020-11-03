@@ -2,22 +2,6 @@
 
 Link to [Demo](https://space-x-rockets-pet-project.netlify.app)
 
-### Installation
-
-```bash
-npm i
-```
-
-### Start project
-```bash
-npm start
-```
-
-### Generate code from GraphQL schema
-```bash
-npm run codegen
-```
-
 ### Structure
 
     src
