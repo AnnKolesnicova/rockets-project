@@ -1,0 +1,62 @@
+.rocketPage {
+  height: 100%;
+  width: 100%;
+  overflow: hidden auto;
+  padding: 15px 40px 40px;
+  box-sizing: border-box;
+}
+
+.rocketPage_status {
+  margin-top: 40px;
+}
+
+.rocketPage_success {
+  color: var(--green);
+}
+
+.rocketPage_failed {
+  color: var(--red);
+}
+
+.rocketPage_description {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: rgba(91, 91, 91, 0.8);
+}
+
+.rocketPage_images {
+  display: grid;
+  grid-gap: 30px;
+  margin-top: 40px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.rocketPage_image {
+  width: 100%;
+}
+
+.rocketPage_about .rocketPage_item {
+  margin: 5px 0;
+}
+
+.rocketPage_stages {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border: solid 3px var(--gray-dark);
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 20px 0;
+}
+
+.rocketPage_stages > * {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.rocketPage_stages .rocketPage_heading {
+ margin-top: 0;
+}
