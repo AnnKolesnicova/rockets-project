@@ -1,6 +1,6 @@
 ### React app using a [SpaceX GraphQL](https://spacexdata.herokuapp.com/graphql) of the [public API](https://docs.spacexdata.com/).
 
-Link to [Demo]()
+Link to [Demo](https://space-x-rockets-pet-project.netlify.app)
 
 ### Installation
 
