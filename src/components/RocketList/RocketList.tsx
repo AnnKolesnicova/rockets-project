@@ -1,7 +1,7 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { RocketListQuery } from '../../generated/graphql';
-import { RocketListContainerProps } from './index';
+import { RocketListContainerProps } from './RocketListContainer';
 import styles from './RocketList.module.css';
 
 interface RocketListProps extends RocketListContainerProps {
