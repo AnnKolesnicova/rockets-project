@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { useRocketListQuery} from '../../generated/graphql';
-import RocketList, {  } from './RocketList';
+import { useRocketListQuery } from '../../generated/graphql';
+import RocketList from './RocketList';
 import Loading from '../../lib/Loading';
 
 export interface RocketListContainerProps {
@@ -8,12 +8,14 @@ export interface RocketListContainerProps {
   activeId?: string;
 }
 
-const RocketListContainer = (props: RocketListContainerProps) => {
+const RocketListContainer: React.FC<RocketListContainerProps> = ({ handleIdChange, activeId }) => {
   const { data, error, loading } = useRocketListQuery();
   if (loading) return <Loading />
   if (error || !data) return <div>ERROR</div>;
 
-  return <RocketList data={data} {...props} />;
+  if (!activeId) handleIdChange(data.rockets[0].rocket_id as string);
+
+  return <RocketList data={data} handleIdChange={handleIdChange} activeId={activeId} />;
 };
 
 export default RocketListContainer;

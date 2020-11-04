@@ -4,18 +4,14 @@ import Rocket from './components/Rocket';
 
 import styles from './App.module.css';
 
-const INITIAL_ROCKET_ID = 'starship';
 
 const App = () => {
-  const [id, setId] = React.useState(INITIAL_ROCKET_ID);
-  const handleIdChange = React.useCallback(newId => {
-    setId(newId);
-  }, []);
+  const [id, setId] = React.useState('');
 
   return (
     <main className={styles.app}>
       <nav className={styles.list}>
-        <RocketList handleIdChange={handleIdChange} activeId={id}/>
+        <RocketList handleIdChange={setId} activeId={id}/>
       </nav>
       <section className={styles.page}>
         <Rocket id={id} />

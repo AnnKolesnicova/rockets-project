@@ -5,7 +5,7 @@ import { ApolloProvider } from 'react-apollo';
 import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
 import './index.css';
 import App from './App';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 const client = new ApolloClient({
   uri: 'https://spacexdata.herokuapp.com/graphql',
