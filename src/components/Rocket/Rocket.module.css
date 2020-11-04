@@ -6,19 +6,19 @@
   box-sizing: border-box;
 }
 
-.rocketPage_status {
+.status {
   margin-top: 40px;
 }
 
-.rocketPage_success {
+.success {
   color: var(--green);
 }
 
-.rocketPage_failed {
+.failed {
   color: var(--red);
 }
 
-.rocketPage_description {
+.description {
   margin: 0;
   display: flex;
   align-items: center;
@@ -26,22 +26,22 @@
   color: rgba(91, 91, 91, 0.8);
 }
 
-.rocketPage_images {
+.images {
   display: grid;
   grid-gap: 30px;
   margin-top: 40px;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.rocketPage_image {
+.image {
   width: 100%;
 }
 
-.rocketPage_about .rocketPage_item {
+.about .item {
   margin: 5px 0;
 }
 
-.rocketPage_stages {
+.stages {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -52,11 +52,11 @@
   margin: 20px 0;
 }
 
-.rocketPage_stages > * {
+.stages > * {
   flex-grow: 1;
   width: 100%;
 }
 
-.rocketPage_stages .rocketPage_heading {
+.stages .heading {
  margin-top: 0;
 }

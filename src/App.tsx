@@ -1,27 +1,23 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import RocketList from './components/RocketList';
 import Rocket from './components/Rocket';
 
-import './App.css';
+import styles from './App.module.css';
+
+const INITIAL_ROCKET_ID = 'starship';
 
 const App = () => {
-  const [id, setId] = React.useState('starship');
+  const [id, setId] = React.useState(INITIAL_ROCKET_ID);
   const handleIdChange = React.useCallback(newId => {
     setId(newId);
   }, []);
 
   return (
-    <main className="App">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Space X Rockets Pet Project</title>
-        <meta name="robots" content="noindex" />
-      </Helmet>
-      <nav className="list">
+    <main className={styles.app}>
+      <nav className={styles.list}>
         <RocketList handleIdChange={handleIdChange} activeId={id}/>
       </nav>
-      <section className="page">
+      <section className={styles.page}>
         <Rocket id={id} />
       </section>
     </main>

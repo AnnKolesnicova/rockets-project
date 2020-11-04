@@ -7,29 +7,29 @@
   padding: 20px 0;
 }
 
-.rocketList_heading {
+.heading {
   padding: 20px 30px;
 }
 
-.rocketList_items {
+.items {
   list-style: none;
   margin: 0;
   box-sizing: border-box;
   padding: 0 30px;
 }
 
-.rocketList_item {
+.item {
   padding: 20px 0;
   border-top: 1px solid #373737;
   cursor: pointer;
   transition: font-weight linear 0.1s;
 }
 
-.rocketList_item:hover, .rocketList_active_item {
+.item:hover, .active_item {
   font-weight: bold;
 }
 
-.rocketList_description {
+.description {
   margin: 5px 0;
   display: flex;
   align-items: center;
@@ -37,6 +37,6 @@
   color: rgba(243, 243, 243, 0.5);
 }
 
-.rocketList_description *:first-child {
+.description *:first-child {
   margin-right: 8px;
 }

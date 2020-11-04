@@ -3,11 +3,11 @@ import { useRocketQuery } from '../../generated/graphql';
 import Rocket from './Rocket';
 import Loading from '../../lib/Loading';
 
-interface OwnProps {
+interface RocketContainerProps {
   id: string;
 }
 
-const RocketContainer = ({ id }: OwnProps) => {
+const RocketContainer = ({ id }: RocketContainerProps) => {
   const { data, error, loading } = useRocketQuery({
     variables: { id },
   });
