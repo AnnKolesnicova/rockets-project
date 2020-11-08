@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useRocketQuery } from '../../generated/graphql';
 import Rocket from './Rocket';
-import Loading from '../../lib/Loading';
+import Loading from '../../lib/components/Loading/Loading';
 
 interface RocketContainerProps {
   id: string;

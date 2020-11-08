@@ -1,11 +1,12 @@
 import * as React from 'react';
+import styles from './styles.module.css';
 
 type LoadingProps = {
   size?: number;
 }
 
 const Loading: React.FC<LoadingProps> = ({ size = 80 }) => (
-  <div className="loading_container">
+  <div className={styles.loading_container}>
     <svg version="1.1" id="L9" x="0px" y="0px" viewBox="0 0 100 100" enableBackground="new 0 0 0 0" width={size}
          height={size}>
       <path fill="currentColor"

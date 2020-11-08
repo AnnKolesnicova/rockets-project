@@ -5,28 +5,31 @@ import { RocketListContainerProps } from './RocketListContainer';
 import styles from './RocketList.module.css';
 
 interface RocketListProps extends RocketListContainerProps {
-  data: RocketListQuery;
+  rockets?: RocketListQuery["rockets"]
 }
 
-const RocketList: React.FC<RocketListProps> = ({data, handleIdChange, activeId}) => (
+const RocketList: React.FC<RocketListProps> = ({ rockets, handleIdChange, activeId}) => (
   <div className={styles.rocketList}>
-    <h3 className={styles.heading}>Rockets</h3>
     <ul className={styles.items}>
-      {!!data.rockets && data.rockets.map((rocket, i) => !!rocket && (
-          <li
-            key={i}
-            className={cx(styles.item, {
-              [styles.active_item]: activeId === rocket.rocket_id
-            })}
-            onClick={() => handleIdChange(rocket.rocket_id!)}
-          >
-            <span>{rocket.rocket_name}</span>
-            <div className={styles.description}>
-              <span>{rocket.country}</span> <span>({rocket.first_flight})</span>
-            </div>
-          </li>
-        ),
-      )}
+      {rockets && rockets.length
+        ? (
+          rockets.map((rocket, i) => (
+            <li
+              key={i}
+              className={cx(styles.item, {
+                [styles.active_item]: activeId === rocket.rocket_id
+              })}
+              onClick={() => handleIdChange(rocket.rocket_id!)}
+            >
+              <span>{rocket.rocket_name}</span>
+              <div className={styles.description}>
+                <span>{rocket.country}</span> <span>({rocket.first_flight})</span>
+              </div>
+            </li>
+          ))
+        )
+        : <div className={styles.resultsError}>No results. Please, try again</div>
+      }
     </ul>
   </div>
 );
