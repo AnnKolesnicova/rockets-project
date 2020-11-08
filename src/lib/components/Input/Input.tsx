@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import SearchIcon from '../../icons/SearchIcon';
+import SearchIcon from '../../icons/search.svg';
 import styles from './styles.module.css';
 
 type InputProps = {
@@ -11,7 +11,7 @@ type InputProps = {
 
 const Input: React.FC<InputProps> = ({ className, handleChange, placeholder}) => (
   <div className={styles.inputContainer}>
-    <SearchIcon className={styles.searchIcon} />
+    <img src={SearchIcon} className={styles.searchIcon} />
     <input
       type="text"
       onChange={e => handleChange(e)}
