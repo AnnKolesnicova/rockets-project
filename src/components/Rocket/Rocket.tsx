@@ -40,7 +40,7 @@ const Rocket: React.FC<RocketProps> = ({data}) => {
           <div>
             <h3 className={styles.heading}>First stage</h3>
             <p className={styles.item}>
-              <strong>Fuel amount tons:</strong> {rocket.first_stage.fuel_amount_tons} kg
+              <strong>Fuel amount tons:</strong> {rocket.first_stage.fuel_amount_tons}
             </p>
           </div>
           }
@@ -48,7 +48,7 @@ const Rocket: React.FC<RocketProps> = ({data}) => {
           <div>
             <h3 className={styles.heading}>Second stage</h3>
             <p className={styles.item}>
-              <strong>Fuel amount tons:</strong> {rocket.second_stage.fuel_amount_tons} kg
+              <strong>Fuel amount tons:</strong> {rocket.second_stage.fuel_amount_tons}
             </p>
           </div>
           }
